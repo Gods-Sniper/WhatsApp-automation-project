@@ -18,7 +18,7 @@ def whatsapp_message(contacts, message):
         pyautogui.typewrite("WhatsApp")
         time.sleep(2)
         pyautogui.press("enter")
-        time.sleep(120)  
+        time.sleep(30)  
 
         for contact in contacts:
             # Search for the contact
@@ -32,7 +32,8 @@ def whatsapp_message(contacts, message):
             # Send the message
             pyautogui.typewrite(message)
             pyautogui.press("enter")
-            time.sleep(2)  # Pause between sending messages
+            time.sleep(30)  
             print(f"Message sent successfully to {contact}")
+
     except Exception as e:
         print(f"An error occurred: {e}")
